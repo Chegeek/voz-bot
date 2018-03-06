@@ -21,9 +21,9 @@ def getRSI(market,unit):
 
 def rsiAlert(bot,job):
     for market in markets:
-        rsi,rsiIndex=getRSI("CNDBTC","15m")
+        rsi,rsiIndex=getRSI(market,"15m")
         if rsiIndex:
-            job.context.message.reply_text("MARKET: CNDBTC \t RSI: "+str(rsi))
+            job.context.message.reply_text("MARKET: "+str(market)+"\t RSI: "+str(rsi))
 
 def time(bot, update,job_queue):
     job=job_queue.run_repeating(rsiAlert,30,context=update)
