@@ -1,1 +1,1 @@
-# VietnamOzBot
+# VietnamOzBot (a.k.a. VozBot)
